@@ -14,7 +14,7 @@ provider "google" {
   credentials = "./keys/de-course-411516-c64d64bd809f.json"
 }
 
-resource "google_storage_bucket" "demo-bucket" {
+resource "google_storage_bucket" "demo_bucket" {
   name          = var.gcs_bucket_name
   location      = var.gcp_location
   storage_class = var.gcs_storage_class

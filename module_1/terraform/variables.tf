@@ -10,7 +10,7 @@ variable "bq_dataset_name" {
 
 variable "gcs_bucket_name" {
   description = "The name of the GCS bucket to create"
-  default     = "terraform_bucket"
+  default     = "terraform_bucket_dfvanegas"
 }
 
 variable "gcs_storage_class" {
