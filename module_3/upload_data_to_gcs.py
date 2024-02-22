@@ -23,8 +23,11 @@ project_id = "de-course-411516"
 # Set the bucket name
 BUCKET_NAME = "terraform_bucket_dfvanegas"
 
+YEAR = str(2019)
+COLOR_TAXI = "yellow"
+
 # Set the URL for the API
-URL = "https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2022-"
+URL = f"https://d37ci6vzurychx.cloudfront.net/trip-data/{COLOR_TAXI}_tripdata_{YEAR}-"
 
 # Set the file extension
 file_extension = ".parquet"
@@ -117,7 +120,7 @@ def main():
         # Check if the DataFrame is not empty
         if not df.empty:
             # Save the DataFrame to a PARQUET file
-            file_name = f"data/green_tripdata_2022-{str(month).zfill(2)}.parquet"
+            file_name = f"data/{COLOR_TAXI}_tripdata_{YEAR}-{str(month).zfill(2)}{file_extension}"
             df.to_parquet(file_name)
 
             # Upload the file to GCS
