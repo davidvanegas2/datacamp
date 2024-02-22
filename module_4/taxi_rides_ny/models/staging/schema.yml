@@ -11,5 +11,7 @@ sources:
     tables:
       - name: green_tripdata_non_partitoned
       - name: yellow_tripdata_non_partitoned
+      - name: fhv_data_non_partitoned
+      - name: taxi_zone_non_partitoned
          # freshness:
            # error_after: {count: 6, period: hour}
