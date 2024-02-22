@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: fact_fhv_zones
+  - name: fact_trips
