@@ -51,3 +51,7 @@ terraform.rc
 
 # DuckDB files
 **.duckdb
+
+# CRC files
+**.crc
+
