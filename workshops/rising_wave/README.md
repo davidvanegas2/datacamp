@@ -189,7 +189,7 @@ CREATE MATERIALIZED VIEW top_3_busiest_zones AS
   WHERE tpep_pickup_datetime >= (SELECT MAX(tpep_pickup_datetime) - INTERVAL '17 hours' FROM trip_data)  
     GROUP BY zone  
   ORDER BY num_pickups DESC  
- LIMIT 3;ip_time = (SELECT MAX(avg_trip_time) FROM trip_times);
+ LIMIT 3;
 
 --         zone         | num_pickups 
 -- ---------------------+-------------
